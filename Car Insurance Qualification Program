@@ -1,0 +1,18 @@
+# This program evaluates if an applicant qualifies for car insurance based on specific criteria.
+
+# Ask the applicant for their age.
+age = int(input("What is your age? "))
+
+# Ask the applicant if they have ever had a DUI. Convert the input to a boolean.
+had_dui = input("Have you ever had a DUI? (yes/no) ").lower() == "yes"
+
+# Ask the applicant how many speeding tickets they have.
+speeding_tickets = int(input("How many speeding tickets do you have? "))
+
+# Check if the applicant qualifies for car insurance based on the criteria:
+# Must be over 15 years old, no DUIs, and no more than 3 speeding tickets.
+qualifies = age > 15 and not had_dui and speeding_tickets <= 3
+
+# Print the result of the boolean expression to determine qualification.
+print("Qualified?")
+print(qualifies)
